@@ -28,4 +28,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Merge Csv
       run: |
-        run: python csvmerger.py
+        run: python src/csvmerger.py
