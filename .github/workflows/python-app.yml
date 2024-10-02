@@ -30,9 +30,16 @@ jobs:
         git fetch origin
         git merge origin/data
         git push origin main
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        repository: mogghwhy/buildankideck
+        path: './buildankideck'        
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: "3.10"        
+        python-version: "3.10"
+        cache: 'pip' # caching pip dependencies
+    - run: pip install -r './buildankideck/requirements.txt'
     - name: Merge Csv
       run: python src/csvmerger.py
