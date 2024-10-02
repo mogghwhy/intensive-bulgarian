@@ -24,6 +24,11 @@ jobs:
       run: |
          git config user.name "GitHub Action"
          git config user.email "gitHubAction@github.com"
+    - name: Update Main Branch
+      run: |
+        git checkout main
+        git fetch origin
+        git merge origin/data        
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
