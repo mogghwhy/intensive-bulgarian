@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout self
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
@@ -30,7 +30,7 @@ jobs:
         git fetch origin
         git merge origin/data
         git push origin main
-    - name: Checkout
+    - name: Checkout buildankideck
       uses: actions/checkout@v4
       with:
         repository: mogghwhy/buildankideck
