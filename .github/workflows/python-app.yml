@@ -28,7 +28,8 @@ jobs:
       run: |
         git checkout main
         git fetch origin
-        git merge origin/data        
+        git merge origin/data
+        git push origin main
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
