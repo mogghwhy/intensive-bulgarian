@@ -19,6 +19,7 @@ jobs:
     - name: Checkout self
       uses: actions/checkout@v4
       with:
+        path: main  
         fetch-depth: 0
         ref: main
     - name: Setup Git User
