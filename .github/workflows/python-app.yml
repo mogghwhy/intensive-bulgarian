@@ -49,5 +49,4 @@ jobs:
          git add ./volume*
          git rm -r ./buildankideck
          git commit . -m "Removed unnecessary directory"
-         git commit -m "new data added"
          git push origin main
