@@ -47,6 +47,6 @@ jobs:
          python './src/csvmerger.py'
          git add ./datalist.txt
          git add ./volume*
-         rm -f ./buildankideck
+         rm -rf ./buildankideck
          git commit . -m "Removed unnecessary directory"
          git push origin main
