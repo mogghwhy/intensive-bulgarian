@@ -45,7 +45,4 @@ jobs:
     - name: Merge Csv
       run: | 
          python './src/csvmerger.py'
-         git add ./volume*
-         git add ./datalist.txt
-         git commit -m "message"
-         git push origin main
+         ls -rtal *
