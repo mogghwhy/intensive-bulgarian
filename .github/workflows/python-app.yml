@@ -44,4 +44,4 @@ jobs:
         cache: 'pip' # caching pip dependencies
     - run: pip install -r './buildankideck/requirements.txt'
     - name: Merge Csv
-      run: python './buildankideck/src/build.py'
+      run: python './src/csvmerger.py'
