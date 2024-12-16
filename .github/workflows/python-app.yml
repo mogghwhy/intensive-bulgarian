@@ -19,13 +19,8 @@ jobs:
     - name: Checkout self
       uses: actions/checkout@v4
       with:
-        path: main  
         fetch-depth: 0
         ref: main
-    - name: Setup Git User
-      run: |
-         git config user.name "GitHub Action"
-         git config user.email "gitHubAction@github.com"
     - name: Update Main Branch
       run: |
         git checkout main
