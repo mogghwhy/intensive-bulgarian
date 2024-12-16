@@ -21,6 +21,10 @@ jobs:
       with:
         fetch-depth: 0
         ref: main
+    - name: Setup Git User
+      run: |
+         git config user.name "GitHub Action"
+         git config user.email "gitHubAction@github.com"        
     - name: Update Main Branch
       run: |
         git checkout main
@@ -39,4 +43,9 @@ jobs:
         cache: 'pip' # caching pip dependencies
     - run: pip install -r './buildankideck/requirements.txt'
     - name: Merge Csv
-      run: python './src/csvmerger.py'
+      run: | 
+         python './src/csvmerger.py'
+         git add .
+         git commit -m "message"
+         git push origin main
+      
